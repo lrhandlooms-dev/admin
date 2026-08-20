@@ -563,7 +563,12 @@ const renderInventory =
     }
 
     const items =
-      inventory.slice(0, 6);
+      inventory
+        .filter(
+          (item) =>
+            item.product
+        )
+        .slice(0, 6);
 
     container.innerHTML =
       items
