@@ -385,7 +385,10 @@ const loadDashboard =
 
       if (inventoryCount) {
         inventoryCount.textContent =
-          inventory.length;
+          inventory.filter(
+            (item) =>
+              item.product
+          ).length;
       }
 
 
@@ -560,7 +563,7 @@ const renderInventory =
       `;
 
       return;
-    }
+    } 
 
     const items =
       inventory
